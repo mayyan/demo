@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+body {
+	background-color: #000;
+	color: #fff;
+}
+p.typewriter {
+	border-radius: 5px;
+	border: 1px solid #f00;
+	padding: 5px;
+	font: 13px/1.231 "Courier New", Courier, monospace;
+	width: 400px;
+	margin: auto;
+}
+</style>
+</head>
+
+<body>
+	<p class="typewriter" id="paragraph">Aliquam accumsan, ipsum quis eleifend ultrices, mauris nisl ornare tellus, sit amet ultricies mi libero vel nunc. Curabitur hendrerit dolor eget enim tempor tincidunt. Maecenas ut risus ac neque convallis fermentum. Aliquam erat volutpat. Nullam elit orci, viverra sit amet dignissim vel, ullamcorper vel nisi. Etiam volutpat dolor sed arcu aliquam vehicula. Quisque aliquam enim lacinia dui consequat ut consequat urna tincidunt. Phasellus nisl ante, consequat sed dapibus ut, auctor et risus. Curabitur gravida libero ut elit convallis laoreet.</p>
+	
+<script type="text/javascript" charset="utf-8" src="typewriter.js"></script>
+<script type="text/javascript">
+var paragraph = document.getElementById("paragraph"),
+	typewriter = new Typewriter(paragraph);
+	
+window.onload = typewriter.start;
+</script>
+</body>
+</html>

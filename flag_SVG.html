@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>American Flag</title>
+<style type="text/css">
+.flag {
+	width: 470px;
+	height: 331px;
+	background-color: #FFF;
+	position: relative;
+}
+.red {
+	background-color: #CC0000;
+	height: 25px;
+}
+.white {
+	background-color: #FFFFFF;
+	height: 26px;
+}
+.blue {
+	width: 219px;
+	height: 178px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000066;
+}
+</style>
+</head>
+
+<body>
+	<div class="flag">
+<script type="text/javascript">
+var html = "",
+    stripe,
+	stripeClass;
+for (stripe = 0; stripe < 13; stripe++) {
+	stripeClass = (stripe % 2) ?  "white" : "red";
+	html += "<div class=\"" + stripeClass + "\"></div>";
+}
+document.write(html);
+</script>
+		<div class="blue" id="blue">
+<script type="text/javascript">
+html = "<svg id=\"svgelem\" height=\"178\" width=\"219\" xmlns=\"http://www.w3.org/2000/svg\">";
+
+var points = [[7,15], [12,15], [14,9], [16,15], [21,15], [17,19], [20,25], [14,21], [9,25], [11,19]],
+	points_count = points.length,
+	row = 9,
+	stars_per_row,
+	r,
+	s,
+	p,
+	x,
+	y;
+
+	for (r = 0; r < row; r++) {
+		stars_per_row = (r % 2) ? 5 : 6;	
+		for (s = 0; s < stars_per_row; s++) {
+			html += "<polygon  points='"
+			for (p = 0; p < points_count; p++) {
+				x = points[p][0] + 38 * s + (r % 2) * 16;
+				y = points[p][1] + 18 * r;
+				html += x + "," + y + " ";
+			}
+			html += "' fill='#FFFFFF'></polygon>";
+		}
+	}
+
+html += "</svg>";
+document.write(html);
+</script>
+		</div> <!-- blue -->
+	</div> <!-- flag -->
+</body>
+</html>
