@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+        p {
+            color: #555;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+</head>
+
+<body>
+
+<p>Proin massa leo, suscipit in euismod ut, mattis sed justo. Pellentesque at tincidunt augue. Quisque facilisis sagittis nibh et feugiat. Nullam at mauris nisi. Maecenas aliquam metus vitae dolor tincidunt viverra. Donec sit amet congue turpis, eu tempus arcu. Duis rhoncus pretium tellus eget hendrerit. Nulla facilisi. Curabitur sapien augue, malesuada nec lacus ut, auctor posuere felis. Donec eleifend tincidunt nunc in efficitur. Sed suscipit ex at eros tristique, quis vestibulum felis aliquet. Nam sed urna vel quam interdum feugiat id non elit. Etiam velit ex, egestas luctus auctor id, hendrerit vel neque. Pellentesque consectetur eu massa eget ultricies. Phasellus a fringilla risus, eget sodales lectus.</p>
+
+<!-- begin widget stub -->
+<!-- try data-client-id='client-001' too :) -->
+<script data-version='v1' data-client-id='client-001' id='embedder-signin' type='text/javascript'>
+// "data-version": It's useful to put the version of your embedder script in the "version" data attribute.
+// This will enable you to more easily debug if any issues arise.
+
+// "data-client-id": This ID allows us to pull up the correct widget settings from our database.
+// It's a "client id" of sorts.
+
+// "id": This HTML id allows us to refer to this embedder script's location. This is helpful if you want to inject html
+// code in specific places in hour hosts's website. We use it to insert our payload script into the <head> tag.
+//We wrap our code in an anonymous function to prevent any of our variables from leaking out into the host's site.
+(function() {
+    function async_load() {
+        //BELOW: we begin to construct the payload script that we will shortly inject into our client's DOM.
+        // Below is the URL you want them to get your payload script from!
+        var theUrl = '/~myan/tests/widget/server/signin-payload.js';   
+        var s = $('<script type="text/javascript">')
+                .attr("async", true)
+                .attr("src", theUrl);
+        // This finds the location of our embedder script by finding the element by it's Id.
+        // See why it was useful to give it a unique id?
+        // This inserts our payload script into the DOM of the client's website, just before our embedder script.
+        $('#embedder-signin').after(s);
+    }
+
+    // We want the our embedder to do its thing (run async_load and inject our payload script)
+    // only after our client's website is fully loaded (see above).
+    // Hence, we wait for onload event trigger. This no longer blocks the client's website from loading!
+    // We attachEvent (or addEventListener to be cross-browser friendly) because we don't want to replace our
+    // client's current onLoad function with ours (they might be doing a bunch of things on onLoad as well!)
+    $(window).load(async_load);
+})();
+</script>
+<!-- end widget stub -->
+
+<p>Donec id aliquet odio. Aenean bibendum tincidunt mi, a fringilla orci sollicitudin vel. Mauris eu efficitur ante. Praesent ex sapien, tempus ut feugiat vel, feugiat eget elit. Praesent vel aliquet felis, a tincidunt mauris. Donec sed dui interdum felis pretium sagittis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean gravida sit amet sem nec tempor.</p>
+</body>
+</html>

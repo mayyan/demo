@@ -1,0 +1,248 @@
+.mod-signin {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.mod-signin .txt-xxl {
+    font-size: 24px
+}
+
+.mod-signin .txt-xl {
+    font-size: 15px;
+    color: #444
+}
+
+.mod-signin .txt-lg {
+    font-size: 13px;
+    color: #444
+}
+
+.mod-signin .txt-md {
+    font-size: 12px;
+    color: #444
+}
+
+.mod-signin .txt-sm {
+    font-size: 11px;
+    color: #666
+}
+
+.mod-signin .bold {
+    font-weight: bold
+}
+
+.mod-signin a {
+    color: inherit;
+    text-decoration: underline
+}
+
+.mod-signin {
+    width: 980px;
+    margin: 0 auto
+}
+
+.mod-signin .signin-block {
+    padding: 43px 0 0 124px;
+    display: inline-block;
+    vertical-align: top;
+    width: 686px;
+    box-sizing: border-box
+}
+
+
+
+.mod-signup .hd,
+.mod-signin .hd,
+.mod-forgotpwd .hd {
+    margin-bottom: 20px;
+}
+.mod-signup h1,
+.mod-signin h1,
+.mod-forgotpwd h1 {
+    display: inline-block;
+    color: #08b4df;
+    margin-right: 20px;
+}
+.mod-forgotpwd h2 {
+    color: #08b4df;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+.mod-signin .bd,
+.mod-signup .bd {
+    margin-top: 15px;
+}
+.mod-signin .legal,
+.mod-signup .legal {
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+.mod-signup .password-hint {
+    font-style: italic;
+    margin-top: 5px;
+    color: #666666;
+    font-size: 0.84em;
+}
+/**********************************/
+/** Facebook Login Button Styles **/
+/**********************************/
+.mod-signup .fb-signup,
+.mod-signin .fb-login {
+    background: #3b5998 url("//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/sprite_icon_21.png") no-repeat 15px -30px;
+    cursor: pointer;
+    border: none;
+    padding-right: 0;
+    text-align: left;
+    height: 40px;
+    width: 213px;
+
+    border-radius: 3px;
+}
+
+.mod-signin .fb-login {
+    width: 207px;
+}
+
+.mod-signup .bd .fb-signup .fb-text,
+.mod-signin .bd .fb-login .fb-text {
+    border-left: 1px solid #fcfcf9;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 35px;
+    padding: 13px 0 13px 14px;
+    text-align: left;
+}
+
+.mod-signup strong,
+.mod-signin strong {
+    font-weight: bold;
+}
+/**************************************/
+/** End Facebook Login Button Styles **/
+/**************************************/
+
+.mod-signup .input-email,
+.mod-signup .input-pwd,
+.mod-signin .input-email,
+.mod-signin .input-pwd,
+.mod-forgotpwd .input-email {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.75);
+    display: block;
+    margin: 0 0 -4px 0;
+    transition: all 0.15s linear;
+    width: 240px;
+    height: 18px;
+    padding: 8px;
+}
+.mod-signup .input-email.err,
+.mod-signup .input-pwd.err,
+.mod-signin .input-email.err,
+.mod-signin .input-pwd.err,
+.mod-forgotpwd .input-email.err {
+    border: 1px solid #cb221b;
+}
+.mod-signin p.errmsg,
+.mod-signup p.errmsg,
+.mod-forgotpwd p.errmsg {
+    color: #cb221b;
+    padding: 12px 0 8px 0;
+    margin-bottom: 0;
+}
+
+.mod-signup .bd .notice_option {
+    padding-left: 27px;
+    background-position: 0 -366px;
+}
+.mod-signin .bd .rememme {
+    margin: 16px 0 0 0;
+}
+.mod-signup .bd .options {
+    margin: 10px 0 0 0;
+}
+
+.mod-signup .bd .options li {
+    margin-bottom: 10px;
+}
+
+.mod-signin .bd .chkbox,
+.mod-signup .bd .chkbox {
+    vertical-align: middle;
+}
+
+.mod-signup .bd .options label,
+.mod-signin .bd .rememme label {
+    margin-left: 4px;
+    vertical-align: top;
+    display: inline-block;
+    line-height: 17px;
+}
+
+.mod-signup .step-label {
+
+}
+.mod-signin .forgotpwd {
+    cursor: pointer;
+}
+.mod-signin .signin-option2-label,
+.mod-signup .signup-option2-label {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.mod-signin .cta-with-label,
+.mod-signup .cta-with-label {
+    display: inline;
+}
+.mod-signup .continue {
+    margin-left: 10px;
+}
+
+.mod-signin .separator,
+.mod-signup .separator {
+    position: relative;
+    margin: 0 20% 0 0;
+}
+.mod-signin .separator hr,
+.mod-signup .separator hr {
+    background-color: #e4e4e4;
+    height: 1px;
+    border: none;
+}
+.mod-signin .separator p,
+.mod-signup .separator p {
+    position: absolute;
+    top: -7px;
+    left: 45%;
+    padding: 0 10px;
+    background-color: #fcfcf9;
+}
+
+.mod-forgotpwd .desc {
+    margin-bottom: 10px;
+}
+
+
+
+.mod-signin.horizontal .fb-register,
+.mod-signin.horizontal .email-register {
+    float: left;
+}
+.mod-signin.horizontal .fb-register {
+    padding-right: 25px;
+}
+.mod-signin.horizontal .email-register {
+    border-left: 1px solid #e4e4e4;
+    padding-left: 25px;
+}
+.mod-signin.horizontal .separator {
+    display: none;
+}
+.mod-signin.horizontal .signin-option2-label, 
+.mod-signup.horizontal .signup-option2-label {
+    margin-top: 0;
+
+}

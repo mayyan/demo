@@ -1,0 +1,273 @@
+@import url("//fonts.googleapis.com/css?family=Sanchez");
+
+button:focus {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.txt-offscreen {
+    text-indent: -999em;
+}
+.clearfix {
+    clear: both;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+/**
+ * Sprites
+ */
+.sprite-icons {
+    background-image: url("//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/sprite_icon_28.png");
+    background-repeat: no-repeat;
+}
+.sprite-pod {
+    background-image: url("//cdn.cpnscdn.com/static.coupons.com/Sites/img/urban/sprite_pod_2.png");
+    background-repeat: no-repeat;
+}
+
+/* this rule and the next define the much-repeated horizontal UL pattern */
+.horizontal-list {
+    margin: 0 auto;
+    padding: 0;
+}
+.horizontal-list li {
+    text-align: center;
+    display: inline-block;
+    list-style: none;
+}
+.triangle { /* default, pointing to right */
+    border-color: transparent transparent transparent #08B4DF;
+    border-style: solid;
+    border-width: 6px 4px;
+    height: 0;
+    width: 0;
+    position: relative;
+    bottom: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+    font-size: 0;
+}
+.triangle-down {
+    border-color: #08B4DF transparent transparent transparent;
+}
+.triangle-up {
+    border-color: transparent transparent #08B4DF transparent;
+}
+.hidden {
+    display: none;
+}
+.fixed-header {
+    padding-top: 56px;
+}
+
+/* stubbornella media object */
+/* .media { ** margin:10px; ** } */
+.media {overflow:hidden; _overflow:visible; zoom:1;}
+.media .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img {display:block;}
+.media .imgExt {float:right; margin-left: 10px;}
+/* end stubbornella */
+
+.btn-cta,
+.cta-button {
+    background: #08b4df;
+    border: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+    letter-spacing: 0;
+}
+.btn-cta.small,
+.cta-button.small {
+    padding: 8px 15px;
+}
+
+.pointerEnabled .btn-cta:hover,
+.pointerEnabled .cta-button:hover {
+    background: rgba(4, 146, 182,1);
+}
+.btn-cta.disabled,
+.cta-button.disabled,
+.pointerEnabled .btn-cta.disabled:hover,
+.pointerEnabled .cta-button.disabled:hover {
+    cursor: default;
+    color: #b9b9b9;
+    background: #e9e9e9;
+}
+
+/**
+ * Flyout Dialog
+ */
+.ui-widget-overlay {
+    /* modal dialog shim layer */
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+.flyout-outer {
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(50, 50, 50, 0.5);
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px 20px 40px 20px;
+}
+.flyout-outer:focus {
+    outline: none;
+}
+.flyout-inner h2 {
+    font-size: 176.9%;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+.flyout-outer .ui-dialog-titlebar .ui-button,
+.flyout-inner .close-btn { /* We will need css for ".flyout-inner .close-btn" for inline div such as podshare FT */
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    font-size: 85%;
+    top: 7px;
+    position: absolute;
+    right: 3px;
+    text-align: right;
+    outline: 0 none;
+    font-size: 150%;
+    color: #333;
+    z-index: 1;
+}
+.flyout-inner .cancel-btn {
+    cursor: pointer;
+}
+.flyout-inner .close-icon {
+    background-position: 0 -305px;
+    padding: 3px 4px 0 10px;
+}
+
+/**
+ * CSS for arrow-box bubble dialog
+ * appears to have been generated from here: http://cssarrowplease.com/
+ * By default, box is above target element, arrow is pointing down
+ *             arrow-box-bottom: box is below target element, arrow is pointing up
+ *             arrow-box-left: box is to the left of target element, arrow is pointing right
+ *             arrow-box-right: box is to the right of the target element, arrow is pointing left
+ */
+.arrow-box {
+    background: #555555;
+    background-color: hsla(0, 0%, 33%, 0.95);
+    box-shadow: none;
+    border-radius: 5px;
+    overflow: visible;
+}
+
+.arrow-box.flyout-outer .ui-dialog-titlebar .ui-button  {
+    margin: 0;
+    padding: 0;
+    width: 17px;
+    top: -2px;
+    color: #ededed;
+    right: 3px;
+    font-size: 22px;
+}
+
+.arrow-box:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+/*  left/right/above/below are used to place a pointing arrow
+    the location is where the bubble will be placed relative to the thing
+    to which the bubble is pointing.
+    eg, left = bubble is *to the left* of the element
+    These no longer say where the arrow is pointing
+*/
+
+.arrow-box-left:after  {
+    left: 100%;
+}
+.arrow-box-right:after  {
+    right: 100%;
+}
+.arrow-box-below:after  {
+    bottom: 100%;
+}
+.arrow-box-above:after  {
+    top: 100%;
+}
+
+.arrow-box.arrow-box-below:after ,
+.arrow-box.arrow-box-above:after ,
+.arrow-box.arrow-box-right:after ,
+.arrow-box.arrow-box-left:after {
+    border-color: transparent;
+    border-width: 10px;
+}
+
+.arrow-box.arrow-box-above:after {
+    border-top-color: #555555;
+    border-top-color: hsla(0, 0%, 33%, 0.95);
+}
+.arrow-box.arrow-box-right:after {
+    border-right-color: #555555;
+    border-right-color: hsla(0, 0%, 33%, 0.95);
+}
+.arrow-box.arrow-box-left:after {
+    border-left-color: #555555;
+    border-left-color: hsla(0, 0%, 33%, 0.95);
+}
+.arrow-box.arrow-box-below:after {
+    border-bottom-color: #555555;
+    border-bottom-color: hsla(0, 0%, 33%, 0.95);
+}
+
+/* No javascript warning */
+div#noscript-warning {
+    border: 5px solid #B0DFF5;
+    margin: 12px auto;
+    padding: 7px 28px;
+    width: 466px;
+}
+div#noscript-warning div.noscript-content {
+    float: right;
+}
+
+@font-face {
+    font-family: "RockSaltRegular";
+    font-style: normal;
+    font-weight: normal;
+    src: url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.eot");
+    src: url("//www.coupons.com/layouts/fonts/RockSalt/RockSalt-webfont.eot?#iefix") format("embedded-opentype"), /* To support webfont on IE9 over HTTPS, need same-origin even with Access-Control-Allow-Orig: * on CDN */
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.woff") format("woff"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.ttf") format("truetype"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/RockSalt-webfont.svg#webfontCOxZFOKy") format("svg");
+}
+@font-face {
+    font-family: "SpriteFont";
+    font-style: normal;
+    font-weight: normal;
+
+    src: url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon_3.eot");
+    src: url("//www.coupons.com/layouts/fonts/icomoon/icomoon_3.eot#iefix") format("embedded-opentype"), /* To support webfont on IE9 over HTTPS, need same-origin even with Access-Control-Allow-Orig: * on CDN */
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon_3.woff") format("woff"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon_3.ttf") format("truetype"),
+         url("//cdn.cpnscdn.com/static.coupons.com/Sites/fonts/icomoon_3.svg#icomoon") format("svg");
+}
